@@ -16,7 +16,9 @@ public class ControlaJogador : MonoBehaviour
         float eixoX = Input.GetAxis("Horizontal");
         float eixoZ = Input.GetAxis("Vertical");
         Vector3 direcao = new Vector3(eixoX , 0 , eixoZ);
-        transform.Translate(direcao * velocidade * Time.deltaTime);
+        //transform.Translate(direcao * velocidade * Time.deltaTime);
+        GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + (direcao * velocidade * Time.deltaTime));
+        
 
         if(direcao != Vector3.zero){
             GetComponent<Animator>().SetBool("Movendo",true);
