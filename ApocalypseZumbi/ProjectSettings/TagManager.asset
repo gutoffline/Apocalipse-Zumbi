@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Inimigo
   - Teste
+  - Jogador
   layers:
   - Default
   - TransparentFX
